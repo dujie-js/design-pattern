@@ -10,6 +10,20 @@ package com.js.project.domain;
 public class GiftInfo {
     private String name;
 
+    private String password;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public GiftInfo(String name){
         this.name = name;
     }
@@ -23,7 +37,10 @@ public class GiftInfo {
         final StringBuilder sb = new StringBuilder("{");
         sb.append("\"name\":\"")
                 .append(name).append('\"');
+        sb.append(",\"password\":\"")
+                .append(password).append('\"');
         sb.append('}');
         return sb.toString();
     }
+
 }

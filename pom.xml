@@ -11,6 +11,11 @@
         <module>strategy-service</module>
         <module>singleton-service</module>
         <module>prototype-service</module>
+        <module>adapter-pattern</module>
+        <module>bridge-pattern</module>
+        <module>composite-pattern</module>
+        <module>facade-pattern</module>
+        <module>proxy-pattern</module>
     </modules>
 
     <properties>

@@ -5,7 +5,7 @@ import com.js.interfaces.IMessage;
 public abstract class AbstractMessage {
     IMessage iMessage;
 
-    public AbstractMessage(IMessage iMessage) {
+    protected AbstractMessage(IMessage iMessage) {
         this.iMessage = iMessage;
     }
 

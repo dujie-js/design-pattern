@@ -16,6 +16,7 @@
         <module>composite-pattern</module>
         <module>facade-pattern</module>
         <module>proxy-pattern</module>
+        <module>access-mode-pattern</module>
     </modules>
 
     <properties>

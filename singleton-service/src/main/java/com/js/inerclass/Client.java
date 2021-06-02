@@ -11,12 +11,13 @@ public class Client {
         Singleton.getInstance();
     }
 
-    static class Singleton{
+    static class Singleton {
         private static final Singleton instance = new Singleton();
 
-        private Singleton(){}
+        private Singleton() {
+        }
 
-        public static Singleton getInstance(){
+        public static Singleton getInstance() {
             return instance;
         }
     }

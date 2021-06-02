@@ -1,4 +1,5 @@
 package com.js.staticproxy.intefaces;
+
 /**
  * @Description: 抽象主题角色
  * @Param

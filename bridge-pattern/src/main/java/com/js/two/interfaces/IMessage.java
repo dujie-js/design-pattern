@@ -1,4 +1,4 @@
-package com.js.interfaces;
+package com.js.two.interfaces;
 
 /**
  * @Description: 创建IMessage接口担任桥接角色

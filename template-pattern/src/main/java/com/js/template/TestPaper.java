@@ -13,20 +13,25 @@ public class TestPaper {
         System.out.println("问题一: a,b,c,d");
         System.out.println("结果为" + answer1());
     }
+
     public void TestQuestion2() {
         System.out.println("问题二: a,b,c,d");
         System.out.println("结果为" + answer2());
     }
+
     public void TestQuestion3() {
         System.out.println("问题三: a,b,c,d");
         System.out.println("结果为" + answer3());
     }
+
     public String answer1() {
         return "";
     }
+
     public String answer2() {
         return "";
     }
+
     public String answer3() {
         return "";
     }

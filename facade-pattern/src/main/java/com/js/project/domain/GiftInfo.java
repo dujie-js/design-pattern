@@ -24,7 +24,7 @@ public class GiftInfo {
         this.password = password;
     }
 
-    public GiftInfo(String name){
+    public GiftInfo(String name) {
         this.name = name;
     }
 

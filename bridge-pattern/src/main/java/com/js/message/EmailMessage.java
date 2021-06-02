@@ -1,9 +1,10 @@
 package com.js.message;
 
-import com.js.interfaces.IMessage;
+import com.js.two.interfaces.IMessage;
+
 /**
  * @Description: 创建邮件
- *               邮件消息实现类
+ * 邮件消息实现类
  * @Param
  * @Author: 渡劫 dujie
  * @Date: 2021/5/8 3:36 PM

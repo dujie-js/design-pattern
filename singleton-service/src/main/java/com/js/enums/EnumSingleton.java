@@ -12,7 +12,7 @@ public enum EnumSingleton {
         this.data = data;
     }
 
-    public static EnumSingleton getInstance(){
+    public static EnumSingleton getInstance() {
         return INSTANCE;
     }
 }

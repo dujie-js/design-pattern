@@ -6,11 +6,11 @@ import com.js.tradadtion.pojo.TestPaperA;
 public class Test {
 
     /**
+     * @return
      * @Description: 此时实现方法出现大量的冗余
      * @Param [args]
      * @Author: 渡劫 dujie
      * @Date: 2021/5/21 11:44 AM
-     * @return
      */
     public static void main(String[] args) {
         System.out.println("甲抄的文档");

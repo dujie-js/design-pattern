@@ -1,7 +1,7 @@
 package com.js.prototype;
 
 public class ConcretePrototype extends Prototype {
-	public void show(){
-		System.out.println("原型模式实现类");
-	}
+    public void show() {
+        System.out.println("原型模式实现类");
+    }
 }

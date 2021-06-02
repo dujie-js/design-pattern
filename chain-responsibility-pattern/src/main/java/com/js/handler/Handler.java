@@ -12,7 +12,7 @@ public abstract class Handler {
     /**
      * 下一个Handler
      */
-    protected  Handler nextHandler;
+    protected Handler nextHandler;
 
     public void setNextHandler(Handler handler) {
         this.nextHandler = handler;

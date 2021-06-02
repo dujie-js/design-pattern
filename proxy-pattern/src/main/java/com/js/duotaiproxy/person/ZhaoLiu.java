@@ -8,7 +8,7 @@ public class ZhaoLiu implements IPerson {
         System.out.println("符合要求");
     }
 
-    public void buyInsure(){
+    public void buyInsure() {
 
     }
 }

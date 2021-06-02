@@ -12,7 +12,7 @@ public abstract class AbstractAdapter extends PassPortService implements ILoginA
     public abstract ResultMsg login(String id, Object adapter);
 
     public ResultMsg loginForRegist(String userName, String password) {
-        if (null == password){
+        if (null == password) {
             password = "THIRD_EMPTY";
         }
         super.regist(userName, password);

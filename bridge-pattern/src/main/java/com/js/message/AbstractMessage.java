@@ -1,6 +1,6 @@
 package com.js.message;
 
-import com.js.interfaces.IMessage;
+import com.js.two.interfaces.IMessage;
 
 public abstract class AbstractMessage {
     IMessage iMessage;
@@ -10,7 +10,7 @@ public abstract class AbstractMessage {
     }
 
     // 发送消息
-    public void sendMessage(String message,String toUser){
-        this.iMessage.send(message,toUser);
+    public void sendMessage(String message, String toUser) {
+        this.iMessage.send(message, toUser);
     }
 }

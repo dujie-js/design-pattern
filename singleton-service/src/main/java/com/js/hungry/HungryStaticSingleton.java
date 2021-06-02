@@ -10,7 +10,8 @@ public class HungryStaticSingleton {
      */
     private static final HungryStaticSingleton hungryStaticSingleton = new HungryStaticSingleton();
 
-    private HungryStaticSingleton(){}
+    private HungryStaticSingleton() {
+    }
 
     public static HungryStaticSingleton getInstance() {
         return hungryStaticSingleton;

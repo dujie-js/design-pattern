@@ -1,8 +1,6 @@
 package com.js.common.intefaces.impl;
 
 import com.js.common.intefaces.IVisitor;
-import com.js.common.intefaces.impl.ConcreteElementA;
-import com.js.common.intefaces.impl.ConcreteElementB;
 
 public class ConcreteVistorB implements IVisitor {
     @Override

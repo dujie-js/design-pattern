@@ -1,4 +1,5 @@
 package com.js.intefaces;
+
 /**
  * @Description: 组合模式，常用在树形结构的处理 例如：文件夹目录结构
  * @Param
@@ -31,12 +32,12 @@ public abstract class OrganizationComponent {
         this.des = des;
     }
 
-    public void add(OrganizationComponent organizationComponent){
-        throw  new UnsupportedOperationException();
+    public void add(OrganizationComponent organizationComponent) {
+        throw new UnsupportedOperationException();
     }
 
-    public void remove(OrganizationComponent organizationComponent){
-        throw  new UnsupportedOperationException();
+    public void remove(OrganizationComponent organizationComponent) {
+        throw new UnsupportedOperationException();
     }
 
     public abstract void print();

@@ -14,27 +14,27 @@ public class PassportForThirdAdapter extends PassPortService implements IPasspor
 
     @Override
     public ResultMsg loginForQQ(String openId) {
-        return loginForRegist(openId,null);
+        return loginForRegist(openId, null);
     }
 
     @Override
     public ResultMsg loginForWechat(String openId) {
-        return loginForRegist(openId,null);
+        return loginForRegist(openId, null);
     }
 
     @Override
     public ResultMsg loginForToken(String token) {
-        return loginForRegist(token,null);
+        return loginForRegist(token, null);
     }
 
     @Override
     public ResultMsg loginForTelPhone(String phone, String code) {
-        return loginForRegist(phone,null);
+        return loginForRegist(phone, null);
     }
 
 
     private ResultMsg loginForRegist(String userName, String password) {
-        if (null == password){
+        if (null == password) {
             password = "THIRD_EMPTY";
         }
         super.regist(userName, password);

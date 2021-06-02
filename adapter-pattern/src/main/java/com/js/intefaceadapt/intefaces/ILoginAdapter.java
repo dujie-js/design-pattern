@@ -5,5 +5,5 @@ import com.js.vo.ResultMsg;
 public interface ILoginAdapter {
     boolean support(Object object);
 
-    ResultMsg login(String id,Object adapter);
+    ResultMsg login(String id, Object adapter);
 }

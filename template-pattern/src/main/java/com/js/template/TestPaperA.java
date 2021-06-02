@@ -16,5 +16,5 @@ public class TestPaperA extends TestPaper {
     @Override
     public String answer3() {
         return "a";
-    } 
+    }
 }

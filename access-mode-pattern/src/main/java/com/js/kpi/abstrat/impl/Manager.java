@@ -16,7 +16,7 @@ public class Manager extends Employee {
         visitor.visit(this);
     }
 
-    public int getProducts(){
-        return  new Random().nextInt(10 * 10000);
+    public int getProducts() {
+        return new Random().nextInt(10 * 10000);
     }
 }

@@ -1,4 +1,5 @@
 package com.js.vo;
+
 /**
  * @Description: 登陆的请求参数
  * @Param
@@ -14,7 +15,7 @@ public class Member {
 
     private String mid;
 
-    private  String info;
+    private String info;
 
     public String getUserName() {
         return userName;

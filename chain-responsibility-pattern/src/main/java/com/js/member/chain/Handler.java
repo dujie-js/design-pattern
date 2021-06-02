@@ -5,7 +5,7 @@ import com.js.member.normal.Member;
 public abstract class Handler {
     protected Handler chain;
 
-    public void next(Handler handler){
+    public void next(Handler handler) {
         this.chain = handler;
     }
 

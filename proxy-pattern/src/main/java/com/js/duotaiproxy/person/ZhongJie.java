@@ -13,13 +13,13 @@ public class ZhongJie implements InvocationHandler {
     public IPerson getInstance(IPerson target) {
         this.target = target;
         Class<?> clazz = target.getClass();
-        return (IPerson) Proxy.newProxyInstance(clazz.getClassLoader(),clazz.getInterfaces(),this);
+        return (IPerson) Proxy.newProxyInstance(clazz.getClassLoader(), clazz.getInterfaces(), this);
     }
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         beafore();
-        Object result = method.invoke(this.target,args);
+        Object result = method.invoke(this.target, args);
         after();
         return result;
     }

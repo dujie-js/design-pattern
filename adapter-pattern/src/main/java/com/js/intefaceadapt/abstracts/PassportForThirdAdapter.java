@@ -26,12 +26,12 @@ public class PassportForThirdAdapter implements IPassportForThird {
     }
 
     public ResultMsg processLogin(String id, Class<? extends ILoginAdapter> clazz) {
-        try{
+        try {
             ILoginAdapter adapter = clazz.newInstance();
-            if (adapter.support(adapter)){
-                return adapter.login(id,adapter);
+            if (adapter.support(adapter)) {
+                return adapter.login(id, adapter);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;

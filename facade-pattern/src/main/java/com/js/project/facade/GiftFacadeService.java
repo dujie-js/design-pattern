@@ -19,10 +19,11 @@ public class GiftFacadeService {
     private QualifyService qualifyService = new QualifyService();
 
     private ShippingService shippingService = new ShippingService();
+
     // 兑换
-    public void exchange(GiftInfo giftInfo){
-        if (qualifyService.isAvailable(giftInfo)){
-            if (paymentService.pay(giftInfo)){
+    public void exchange(GiftInfo giftInfo) {
+        if (qualifyService.isAvailable(giftInfo)) {
+            if (paymentService.pay(giftInfo)) {
                 String shippingOrderNo = shippingService.delivery(giftInfo);
                 System.out.println("物流成功订单号为" + shippingOrderNo);
             }

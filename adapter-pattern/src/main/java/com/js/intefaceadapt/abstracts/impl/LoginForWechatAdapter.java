@@ -15,6 +15,6 @@ public class LoginForWechatAdapter extends AbstractAdapter {
         if (!support(adapter)) {
             return null;
         }
-        return super.loginForRegist(id,null);
+        return super.loginForRegist(id, null);
     }
 }

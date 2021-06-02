@@ -16,7 +16,7 @@ public class Engineer extends Employee {
         visitor.visit(this);
     }
 
-    public int getProducts(){
-        return  new Random().nextInt(10);
+    public int getProducts() {
+        return new Random().nextInt(10);
     }
 }

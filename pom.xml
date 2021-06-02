@@ -18,6 +18,7 @@
         <module>proxy-pattern</module>
         <module>access-mode-pattern</module>
         <module>observer-pattern</module>
+        <module>state-machine-pattern</module>
     </modules>
 
     <properties>

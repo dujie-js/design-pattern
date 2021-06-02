@@ -1,6 +1,7 @@
 package com.js.intefaces.impl;
 
 import com.js.intefaces.IObserver;
+
 /**
  * @Description: 具体观察者
  * @Author: 渡劫 dujie

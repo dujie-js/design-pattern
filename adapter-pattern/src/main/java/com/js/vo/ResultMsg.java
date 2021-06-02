@@ -1,4 +1,5 @@
 package com.js.vo;
+
 /**
  * @Description: 多环境登陆的响应参数
  * @Param

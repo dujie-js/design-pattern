@@ -1,6 +1,7 @@
 package com.js.message;
 
-import com.js.interfaces.IMessage;
+import com.js.two.interfaces.IMessage;
+
 /**
  * @Description: 普通消息发送
  * @Param

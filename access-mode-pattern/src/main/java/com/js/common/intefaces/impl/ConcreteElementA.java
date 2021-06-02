@@ -3,8 +3,6 @@ package com.js.common.intefaces.impl;
 import com.js.common.intefaces.IElement;
 import com.js.common.intefaces.IVisitor;
 
-import java.util.Random;
-
 public class ConcreteElementA implements IElement {
 
     @Override
@@ -12,7 +10,7 @@ public class ConcreteElementA implements IElement {
         visitor.visit(this);
     }
 
-    public String operationA(){
+    public String operationA() {
         return this.getClass().getSimpleName();
     }
 }

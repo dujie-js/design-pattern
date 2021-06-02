@@ -6,9 +6,11 @@ public class TestPaper {
     public void TestQuestion1() {
         System.out.println("问题一: a,b,c,d");
     }
+
     public void TestQuestion2() {
         System.out.println("问题二: a,b,c,d");
     }
+
     public void TestQuestion3() {
         System.out.println("问题三: a,b,c,d");
     }

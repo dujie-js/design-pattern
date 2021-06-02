@@ -38,8 +38,8 @@ public class University extends OrganizationComponent {
      */
     @Override
     public void print() {
-        System.out.println("***********"+getName()+"****************");
-        for (OrganizationComponent organizationComponent:organizationComponentList) {
+        System.out.println("***********" + getName() + "****************");
+        for (OrganizationComponent organizationComponent : organizationComponentList) {
             organizationComponent.print();
         }
     }

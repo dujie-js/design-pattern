@@ -46,16 +46,17 @@ package com.js;//给定两个大小分别为 m 和 n 的正序（从小到大）
 //leetcode submit region begin(Prohibit modification and deletion)
 public class Solution {
     public static void main(String[] args) {
-        int[] nums1 = {1,3};
+        int[] nums1 = {1, 3};
         int[] nums2 = {2};
-        findMedianSortedArrays(nums1,nums2);
+        findMedianSortedArrays(nums1, nums2);
     }
+
     /**
-     * @Description:  数组1，数组2，数组1左，数组2左
+     * @return
+     * @Description: 数组1，数组2，数组1左，数组2左
      * @Param [nums1, nums2, ln1, ln2]
      * @Author: 渡劫 dujie
      * @Date: 2021/5/12 2:32 PM
-     * @return
      */
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int m = nums1.length; // 2
@@ -64,19 +65,20 @@ public class Solution {
         int right = (m + n + 2) / 2; // 2
         return (findKth(nums1, 0, nums2, 0, left) + findKth(nums1, 0, nums2, 0, right)) / 2.0;
     }
+
     //i: nums1的起始位置 j: nums2的起始位置
-    public static int findKth(int[] nums1, int i, int[] nums2, int j, int k){
-        if( i >= nums1.length) return nums2[j + k - 1];//nums1为空数组
-        if( j >= nums2.length) return nums1[i + k - 1];//nums2为空数组
-        if(k == 1){
+    public static int findKth(int[] nums1, int i, int[] nums2, int j, int k) {
+        if (i >= nums1.length) return nums2[j + k - 1];//nums1为空数组
+        if (j >= nums2.length) return nums1[i + k - 1];//nums2为空数组
+        if (k == 1) {
             return Math.min(nums1[i], nums2[j]);
         }
         int midVal1 = (i + k / 2 - 1 < nums1.length) ? nums1[i + k / 2 - 1] : Integer.MAX_VALUE;
         int midVal2 = (j + k / 2 - 1 < nums2.length) ? nums2[j + k / 2 - 1] : Integer.MAX_VALUE;
-        if(midVal1 < midVal2){
-            return findKth(nums1, i + k / 2, nums2, j , k - k / 2);
-        }else{
-            return findKth(nums1, i, nums2, j + k / 2 , k - k / 2);
+        if (midVal1 < midVal2) {
+            return findKth(nums1, i + k / 2, nums2, j, k - k / 2);
+        } else {
+            return findKth(nums1, i, nums2, j + k / 2, k - k / 2);
         }
     }
 }

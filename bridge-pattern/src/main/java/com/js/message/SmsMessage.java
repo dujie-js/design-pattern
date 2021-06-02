@@ -1,6 +1,6 @@
 package com.js.message;
 
-import com.js.interfaces.IMessage;
+import com.js.two.interfaces.IMessage;
 
 /**
  * @Description: 短信消息发送逻辑

@@ -9,5 +9,5 @@ public interface IPassportForThird {
 
     ResultMsg loginForToken(String token);
 
-    ResultMsg loginForTelPhone(String phone,String code);
+    ResultMsg loginForTelPhone(String phone, String code);
 }

@@ -1,6 +1,7 @@
 package com.js.staticproxy.proxy;
 
 import com.js.staticproxy.intefaces.ISubject;
+
 /**
  * @Description: 静态代理
  * @Param
@@ -10,11 +11,13 @@ import com.js.staticproxy.intefaces.ISubject;
  */
 public class Proxy implements ISubject {
     private ISubject subject;
-    public Proxy(ISubject subject){
+
+    public Proxy(ISubject subject) {
         this.subject = subject;
     }
+
     @Override
-    public void request(){
+    public void request() {
         before();
         subject.request();
         after();

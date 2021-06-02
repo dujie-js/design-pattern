@@ -10,6 +10,7 @@ class StrategyServiceApplicationTests {
 
     @Autowired
     private TestService testService;
+
     @Test
     void contextLoads() {
         testService.test(0);

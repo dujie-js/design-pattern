@@ -1,6 +1,6 @@
 package com.js.message;
 
-import com.js.interfaces.IMessage;
+import com.js.two.interfaces.IMessage;
 
 /**
  * @Description: 紧急消息发送
@@ -20,7 +20,7 @@ public class UrgencyMessage extends AbstractMessage {
         super.sendMessage(message, toUser);
     }
 
-    public Object watch(String messageId){
+    public Object watch(String messageId) {
         // 可以根据消息编码查询消息的处理状态
         return null;
     }

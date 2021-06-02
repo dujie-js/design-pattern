@@ -12,7 +12,7 @@ public class ConcreteElementB implements IElement {
         visitor.visit(this);
     }
 
-    public int operationB(){
+    public int operationB() {
         return new Random().nextInt(100);
     }
 }

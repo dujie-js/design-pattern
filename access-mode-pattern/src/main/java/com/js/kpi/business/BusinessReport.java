@@ -22,7 +22,7 @@ public class BusinessReport {
     }
 
     public void showReport(IVisitor visitor) {
-        for (Employee employee: employeeList) {
+        for (Employee employee : employeeList) {
             employee.accept(visitor);
         }
     }

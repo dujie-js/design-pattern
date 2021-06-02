@@ -19,6 +19,7 @@
         <module>access-mode-pattern</module>
         <module>observer-pattern</module>
         <module>state-machine-pattern</module>
+        <module>factory-method-pattern</module>
     </modules>
 
     <properties>

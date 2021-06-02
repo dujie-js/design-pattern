@@ -19,6 +19,10 @@
         <module>access-mode-pattern</module>
         <module>observer-pattern</module>
         <module>state-machine-pattern</module>
+        <module>chain-responsibility-pattern</module>
+        <module>dispather-pattern</module>
+        <module>memento-pattern</module>
+        <module>template-pattern</module>
     </modules>
 
     <properties>

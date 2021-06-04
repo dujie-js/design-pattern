@@ -306,59 +306,31 @@ public enum EnumSingleton {
 
 ## 8、组合模式(composite-pattern)
 
-
-
 ## 9、适配器模式(adapter-pattern)
-
-
 
 ## 10、桥接模式(bridge-pattern)
 
-
-
 ## 11、委派模式(delegate-pattern)
-
-
 
 ## 12、模板方法模式(template-pattern)
 
-
-
 ## 13、策略模式(strategy-service)
-
-
 
 ## 14、责任链模式(chain-responsibility-pattern)
 
-
-
 ## 15、迭代器模式(iterator-pattern)
-
-
 
 ## 16、命令模式(command-pattern)
 
-
-
 ## 17、状态机模式(state-machine-pattern)
-
-
 
 ## 18、备忘录模式(memento-pattern)
 
-
-
 ## 19、中介者模式(mediator-pattern)
-
-
 
 ## 20、解释器模式(interpreter-pattern)
 
-
-
 ## 21、观察者模式(observer-pattern)
-
-
 
 ## 22、访问者模式(visitor-pattern)
 

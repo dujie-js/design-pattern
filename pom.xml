@@ -24,6 +24,8 @@
         <module>memento-pattern</module>
         <module>template-pattern</module>
         <module>factory-method-pattern</module>
+        <module>decorator-pattern</module>
+        <module>flyweight-pattern</module>
     </modules>
 
     <properties>

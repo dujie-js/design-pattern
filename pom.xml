@@ -6,8 +6,10 @@
     <artifactId>design-pattern</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>design-pattern</name>
+    <packaging>pom</packaging>
     <description>设计模式学习</description>
     <modules>
+        <module>abstract-factory-pattern</module>
         <module>strategy-service</module>
         <module>singleton-service</module>
         <module>prototype-service</module>

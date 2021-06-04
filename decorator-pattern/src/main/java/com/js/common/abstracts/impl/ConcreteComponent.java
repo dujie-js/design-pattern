@@ -3,7 +3,7 @@ package com.js.common.abstracts.impl;
 import com.js.common.abstracts.Component;
 
 //具体组件
-public class ConcreteComponent  extends Component {
+public class ConcreteComponent extends Component {
 
     @Override
     public void operation() {

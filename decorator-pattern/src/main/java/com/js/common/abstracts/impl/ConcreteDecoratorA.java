@@ -2,6 +2,7 @@ package com.js.common.abstracts.impl;
 
 import com.js.common.abstracts.Component;
 import com.js.common.abstracts.Decorator;
+
 /**
  * @Description: 具体装饰器
  * @Author: 渡劫 dujie
@@ -14,11 +15,11 @@ public class ConcreteDecoratorA extends Decorator {
         super(component);
     }
 
-    private void operationFirst(){
+    private void operationFirst() {
         System.out.println("ConcreteDecoratorA start");
     }
 
-    private void operationLast(){
+    private void operationLast() {
         System.out.println("ConcreteDecoratorA end");
     }
 

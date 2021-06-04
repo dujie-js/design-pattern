@@ -5,8 +5,10 @@ package com.js.common.abstracts;
  * @Author: 渡劫 dujie
  * @return
  */
-public abstract class Decorator extends Component{
-    /**组件对象**/
+public abstract class Decorator extends Component {
+    /**
+     * 组件对象
+     **/
     protected Component component;
 
     public Decorator(Component component) {

@@ -15,11 +15,11 @@ public class ConcreteDecoratorB extends Decorator {
         super(component);
     }
 
-    private void operationFirst(){
+    private void operationFirst() {
         System.out.println("ConcreteDecoratorB start");
     }
 
-    private void operationLast(){
+    private void operationLast() {
         System.out.println("ConcreteDecoratorB end");
     }
 

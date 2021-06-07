@@ -1,11 +1,11 @@
 package com.js.message;
 
-import com.js.two.interfaces.IMessage;
+import com.js.two.interfaces.MessageInteface;
 
 public abstract class AbstractMessage {
-    IMessage iMessage;
+    MessageInteface iMessage;
 
-    protected AbstractMessage(IMessage iMessage) {
+    protected AbstractMessage(MessageInteface iMessage) {
         this.iMessage = iMessage;
     }
 

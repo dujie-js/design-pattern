@@ -1,6 +1,6 @@
 package com.js.message;
 
-import com.js.two.interfaces.IMessage;
+import com.js.two.interfaces.MessageInteface;
 
 /**
  * @Description: 普通消息发送
@@ -10,7 +10,7 @@ import com.js.two.interfaces.IMessage;
  * @return
  */
 public class NormalMessage extends AbstractMessage {
-    public NormalMessage(IMessage iMessage) {
+    public NormalMessage(MessageInteface iMessage) {
         super(iMessage);
     }
 

@@ -6,6 +6,6 @@ package com.js.two.interfaces;
  * @Author: 渡劫 dujie
  * @Date: 2021/5/8 3:34 PM
  */
-public interface IMessage {
+public interface MessageInteface {
     void send(String message, String toUser);
 }

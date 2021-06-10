@@ -28,6 +28,8 @@
         <module>factory-method-pattern</module>
         <module>decorator-pattern</module>
         <module>flyweight-pattern</module>
+        <module>delegate-pattern</module>
+        <module>iterator-pattern</module>
     </modules>
 
     <properties>

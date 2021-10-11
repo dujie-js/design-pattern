@@ -14,7 +14,7 @@ class StrategyServiceApplicationTests {
     @Test
     void contextLoads() {
         testService.test(0);
-        testService.test(1);
+        testService.testList(1);
     }
 
 }

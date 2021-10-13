@@ -30,6 +30,7 @@
         <module>flyweight-pattern</module>
         <module>delegate-pattern</module>
         <module>iterator-pattern</module>
+        <module>mediator-pattern</module>
     </modules>
 
     <properties>

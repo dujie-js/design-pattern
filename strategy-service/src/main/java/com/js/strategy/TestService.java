@@ -12,4 +12,7 @@ public class TestService {
     public void test(Integer status) {
         couponContext.selectStrategy(status);
     }
+    public void testList(Integer status) {
+        couponContext.findStrategy(status);
+    }
 }

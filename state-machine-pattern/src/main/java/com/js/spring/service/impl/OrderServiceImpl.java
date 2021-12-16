@@ -70,7 +70,10 @@ public class OrderServiceImpl implements IOrderService {
     }
 
     /**
-     * 发送订单状态转换事件     *     * @param message     * @param order     * @return
+     * 发送订单状态转换事件
+     * @param message
+     * @param order
+     * @return
      */
     private synchronized boolean sendEvent(Message<OrderStatusChangeEvent> message, Order order) {
         boolean result = false;

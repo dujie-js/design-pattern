@@ -1,26 +1,13 @@
 package com.js.spring.domain;
 
 import com.js.spring.enums.OrderStatus;
+import lombok.Data;
 
+@Data
 public class Order {
     private int id;
+
     private OrderStatus status;
-
-    public void setStatus(OrderStatus status) {
-        this.status = status;
-    }
-
-    public OrderStatus getStatus() {
-        return status;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
-    }
 
     @Override
     public String toString() {

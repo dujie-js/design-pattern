@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.js.statemachine.mapper.StatemachineConfigMapper">
+    <!-- 结果集 -->
+    <resultMap type="com.js.statemachine.entity.StatemachineConfig" id="StatemachineConfigMap">
+        <result property="id" column="ID" jdbcType="INTEGER"/>
+        <result property="name" column="NAME" jdbcType="VARCHAR"/>
+        <result property="channelCode" column="CHANNEL_CODE" jdbcType="VARCHAR"/>
+        <result property="source" column="SOURCE" jdbcType="INTEGER"/>
+        <result property="target" column="TARGET" jdbcType="INTEGER"/>
+        <result property="event" column="EVENT" jdbcType="INTEGER"/>
+        <result property="action" column="ACTION" jdbcType="VARCHAR"/>
+        <result property="createTime" column="CREATE_TIME" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="UPDATE_TIME" jdbcType="TIMESTAMP"/>
+        <result property="delFlag" column="DEL_FLAG" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!-- 基本字段 -->
+    <sql id="Base_Column_List">
+        ID, NAME, CHANNEL_CODE, SOURCE, TARGET, EVENT, ACTION, CREATE_TIME, UPDATE_TIME, DEL_FLAG        
+    </sql>
+
+    <sql id="Base_Table_Name">
+        statemachine_config
+    </sql>
+
+    <!-- 通过ID查询单条数据 -->
+    <select id="findById" resultMap="StatemachineConfigMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="Base_Table_Name"/>
+        where ID = #{id}
+    </select>
+
+    <sql id="Base_Where">
+        <where>
+            <if test="id != null">and ID = #{id}</if>
+            <if test="name != null and name != ''">and NAME = #{name}</if>
+            <if test="channelCode != null and channelCode != ''">and CHANNEL_CODE = #{channelCode}</if>
+            <if test="source != null">and SOURCE = #{source}</if>
+            <if test="target != null">and TARGET = #{target}</if>
+            <if test="event != null">and EVENT = #{event}</if>
+            <if test="action != null and action != ''">and ACTION = #{action}</if>
+            <if test="createTime != null">and CREATE_TIME = #{createTime}</if>
+            <if test="updateTime != null">and UPDATE_TIME = #{updateTime}</if>
+            <if test="delFlag != null">and DEL_FLAG = #{delFlag}</if>
+        </where>
+    </sql>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="find" resultMap="StatemachineConfigMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="Base_Table_Name"/>
+        <include refid="Base_Where"/>
+    </select>
+
+    <!-- 新增数据 -->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true"
+            parameterType="com.js.statemachine.entity.StatemachineConfig">
+        insert into
+        <include refid="Base_Table_Name"/>
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">ID,</if>
+            <if test="name != null">NAME,</if>
+            <if test="channelCode != null">CHANNEL_CODE,</if>
+            <if test="source != null">SOURCE,</if>
+            <if test="target != null">TARGET,</if>
+            <if test="event != null">EVENT,</if>
+            <if test="action != null">ACTION,</if>
+            <if test="createTime != null">CREATE_TIME,</if>
+            <if test="updateTime != null">UPDATE_TIME,</if>
+            <if test="delFlag != null">DEL_FLAG,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id,jdbcType=INTEGER},</if>
+            <if test="name != null">#{name,jdbcType=VARCHAR},</if>
+            <if test="channelCode != null">#{channelCode,jdbcType=VARCHAR},</if>
+            <if test="source != null">#{source,jdbcType=INTEGER},</if>
+            <if test="target != null">#{target,jdbcType=INTEGER},</if>
+            <if test="event != null">#{event,jdbcType=INTEGER},</if>
+            <if test="action != null">#{action,jdbcType=VARCHAR},</if>
+            <if test="createTime != null">#{createTime,jdbcType=TIMESTAMP},</if>
+            <if test="updateTime != null">#{updateTime,jdbcType=TIMESTAMP},</if>
+            <if test="delFlag != null">#{delFlag,jdbcType=INTEGER},</if>
+        </trim>
+    </insert>
+
+    <!-- 批量新增 -->
+    <insert id="batchInsert">
+        insert into
+        <include refid="Base_Table_Name"/>
+        (ID, NAME, CHANNEL_CODE, SOURCE, TARGET, EVENT, ACTION,CREATE_TIME, UPDATE_TIME, DEL_FLAG)
+        values
+        <foreach collection="statemachineConfigs" item="item" index="index" separator=",">
+            (#{item.id}, #{item.name}, #{item.channelCode}, #{item.source}, #{item.target}, #{item.event},
+            #{item.action}, #{item.createTime}, #{item.updateTime}, #{item.delFlag})
+        </foreach>
+    </insert>
+
+    <!-- 通过主键修改数据 -->
+    <update id="updateById">
+        update statemachine.statemachine_config
+        <set>
+            <if test="name != null and name != ''">NAME = #{name},</if>
+            <if test="channelCode != null and channelCode != ''">CHANNEL_CODE = #{channelCode},</if>
+            <if test="source != null">SOURCE = #{source},</if>
+            <if test="target != null">TARGET = #{target},</if>
+            <if test="event != null">EVENT = #{event},</if>
+            <if test="action != null and action != ''">ACTION = #{action},</if>
+            <if test="createTime != null">CREATE_TIME = #{createTime},</if>
+            <if test="updateTime != null">UPDATE_TIME = #{updateTime},</if>
+            <if test="delFlag != null">DEL_FLAG = #{delFlag},</if>
+        </set>
+        where ID = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from statemachine_config where ID = #{id}
+    </delete>
+
+
+    <!--通过条件删除数据-->
+    <delete id="deleteByEntity" parameterType="com.js.statemachine.entity.StatemachineConfig">
+        delete from
+        <include refid="Base_Table_Name"/>
+        <include refid="Base_Where"/>
+    </delete>
+
+    <!--通过主键列表删除，列表长度不能为0-->
+    <delete id="deleteByIds">
+        delete from statemachine_config where ID in
+        <foreach item="item" collection="list" separator="," open="(" close=")" index="index">
+            #{item}
+        </foreach>
+    </delete>
+
+    <!-- 条件查询总数 -->
+    <select id="countByEntity" parameterType="com.js.statemachine.entity.StatemachineConfig" resultType="int">
+        select count(*) from statemachine_config
+        <include refid="Base_Where"/>
+    </select>
+
+    <!-- 通过主键修改实体列表，列表长度不能为0，注意：当实体属性为null时，对应的列也会别更新为null -->
+    <update id="updateBatch" parameterType="list">
+        update statemachine_config
+        <trim prefix="set" suffixOverrides=",">
+            <trim prefix="NAME = case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    when ID = #{item.id} then #{item.name}
+                </foreach>
+            </trim>
+            <trim prefix="CHANNEL_CODE = case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    when ID = #{item.id} then #{item.channelCode}
+                </foreach>
+            </trim>
+            <trim prefix="SOURCE = case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    when ID = #{item.id} then #{item.source}
+                </foreach>
+            </trim>
+            <trim prefix="TARGET = case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    when ID = #{item.id} then #{item.target}
+                </foreach>
+            </trim>
+            <trim prefix="EVENT = case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    when ID = #{item.id} then #{item.event}
+                </foreach>
+            </trim>
+            <trim prefix="ACTION = case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    when ID = #{item.id} then #{item.action}
+                </foreach>
+            </trim>
+            <trim prefix="CREATE_TIME = case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    when ID = #{item.id} then #{item.createTime}
+                </foreach>
+            </trim>
+            <trim prefix="UPDATE_TIME = case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    when ID = #{item.id} then #{item.updateTime}
+                </foreach>
+            </trim>
+            <trim prefix="DEL_FLAG = case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    when ID = #{item.id} then #{item.delFlag}
+                </foreach>
+            </trim>
+        </trim>
+        where ID in
+        <foreach collection="list" index="index" item="item" separator="," open="(" close=")">
+            #{item.id,jdbcType=INTEGER}
+        </foreach>
+    </update>
+</mapper>

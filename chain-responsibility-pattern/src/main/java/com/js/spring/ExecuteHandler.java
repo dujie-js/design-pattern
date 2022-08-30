@@ -20,7 +20,7 @@ public class ExecuteHandler {
     @Autowired
     private ApplicationContext context;
 
-    private List<Handler> handlerList = new LinkedList<>();
+    private List<Handler> handlerList = new LinkedList<Handler>();
 
     private Handler handler;
 
